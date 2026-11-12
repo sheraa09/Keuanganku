@@ -9,6 +9,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fredoka:wght@500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+   <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ef9fbd">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Dompet Jerapah">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='110' fill='%23ffe4ef'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='280'%3E%F0%9F%A6%92%3C/text%3E%3C/svg%3E">
+
 </head>
 <body>
 
@@ -109,5 +116,12 @@
 </div>
 
 <script src="script.js"></script>
+   <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js');
+      });
+    }
+  </script>
 </body>
 </html>
